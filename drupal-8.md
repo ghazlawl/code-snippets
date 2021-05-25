@@ -8,4 +8,4 @@
 
 #### Get Image Field URL w/ Style
 
-`$url = ImageStyle::load($style)->buildUrl($node->get($field)->entity->getFileUri());`
+`$url = ImageStyle::load('my_image_style')->buildUrl($node->get('field_my_image')->entity->getFileUri());`
