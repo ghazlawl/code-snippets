@@ -1,15 +1,15 @@
-### Formatting
+### Formatting Things
 
-#### Format Node Created Date
+**Format the created date of a node:**
 
 `\Drupal::service('date.formatter')->format($node->getCreatedTime(), 'article_teaser');`
 
-### Getting
+### Getting Things
 
-#### Get Node Path Alias
+**Get the path alias of a node:**
 
-`$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $nid);`
+`$alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $node->id());`
 
-#### Get Node Image Field URL (w/ Style)
+**Get the URL of an image field and apply an image style:**
 
 `$url = \Drupal\image\Entity\ImageStyle::load('my_image_style')->buildUrl($node->get('field_my_image')->entity->getFileUri());`
